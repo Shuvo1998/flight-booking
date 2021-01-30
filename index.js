@@ -11,3 +11,7 @@ function setSubtotal() {
     const t = parseInt(document.getElementById('ticket-quantity').value) * 150 + parseInt(document.getElementById('value-hundred').value) * 100;
     (document.getElementById('sub-total')).innerText = t;
 }
+function getSubtotal(){
+    const t = parseInt(document.getElementById('ticket-quantity').value) * 150 + parseInt(document.getElementById('value-hundred').value) * 100;
+    return (document.getElementById('sub-total')).innerText = t;
+}
