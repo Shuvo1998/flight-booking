@@ -7,3 +7,7 @@ function getIncreased() {
     calculateVat();
     calculateTotal();
 }
+function setSubtotal() {
+    const t = parseInt(document.getElementById('ticket-quantity').value) * 150 + parseInt(document.getElementById('value-hundred').value) * 100;
+    (document.getElementById('sub-total')).innerText = t;
+}
