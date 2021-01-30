@@ -1,13 +1,16 @@
 
 function increaseTicketQuantity(id) {
-    const ticketQuantity = document.getElementById(id);
+    if(id == "increase-btn"){
+        const ticketQuantity = document.getElementById('increase-btn');
+    }else if(id == "increase-hundred"){
+         ticketQuantity = document.getElementById('increase-hundred');
+    }
     const ticketCountNo = parseInt(ticketQuantity.value);
     const newCount = ticketCountNo + 1;
     ticketQuantity.value = newCount;
     setSubtotal();
     calculateVat();
     calculateTotal();
-
 }
 function getDecreased() {
     const ticketInput = document.getElementById('ticket-quantity');
