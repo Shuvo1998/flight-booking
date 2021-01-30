@@ -11,11 +11,7 @@ function getDecreased() {
     const ticketInput = document.getElementById('ticket-quantity');
     const ticketCount = parseInt(ticketInput.value);
     const newCount = ticketCount - 1;
-    if (newCount == 0) {
-        ticketInput.value = 0;
-    } else {
-        ticketInput.value = newCount;
-    }
+    ticketInput.value = newCount <= 0 ? 0 :newCount;
     setSubtotal();
     calculateVat();
     calculateTotal();
@@ -33,7 +29,7 @@ function getDecreasedSecond() {
     const ticketInputSecond = document.getElementById('value-hundred');
     const ticketCountSecond = parseInt(ticketInputSecond.value);
     const newCountSecond = ticketCountSecond - 1;
-    ticketInputSecond.value = newCountSecond == 0 ? 0 : newCountSecond;
+    ticketInputSecond.value = newCountSecond <= 0 ? 0 : newCountSecond;
     setSubtotal();
     calculateVat();
     calculateTotal();
@@ -58,4 +54,12 @@ function getVat(){
 }
 function calculateTotal(){
     document.getElementById('total').innerText = getSubtotal() + getVat();
+}
+
+function showDetails(){
+   const bookingDetails = document.getElementById('home-page');
+   const bookingInfo = document.getElementById('booking-info');
+   bookingDetails.style.display = "none";
+   bookingInfo.style.display = "block";
+
 }
