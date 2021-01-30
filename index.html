@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -29,7 +30,8 @@
     </header>
 
     <!--Booking Section-->
-    <main class="main-content container">
+    
+    <main id="home-page" class="main-content container">
         <div class="booking-form">
             <h3>Booking Flights</h3>
             <div class="input-group">
@@ -56,8 +58,10 @@
                     <input id="ticket-quantity" class="inp-style inp-width" name="" value="1">
                 </div>
                 <div class="plus-minus-btn">
-                    <button onclick="getIncreased()" id="increase-btn" class="btn btn-default"><i class="fas fa-plus"></i></button>
-                    <button onclick="getDecreased()" id="decrease-btn" class="btn btn-default"><i class="fas fa-minus"></i></button>
+                    <button onclick="getIncreased()" id="increase-btn" class="btn btn-default"><i
+                            class="fas fa-plus"></i></button>
+                    <button onclick="getDecreased()" id="decrease-btn" class="btn btn-default"><i
+                            class="fas fa-minus"></i></button>
                 </div>
             </div>
 
@@ -67,8 +71,10 @@
                     <input id="value-hundred" class="inp-style inp-width" name="" value="1">
                 </div>
                 <div class="plus-minus-btn">
-                    <button onclick="getIncreasedSecond()" id="increase-hundred" class="btn btn-default"><i class="fas fa-plus"></i></button>
-                    <button onclick="getDecreasedSecond()" id="decrease-hundred" class="btn btn-default"><i class="fas fa-minus"></i></button>
+                    <button onclick="getIncreasedSecond()" id="increase-hundred" class="btn btn-default"><i
+                            class="fas fa-plus"></i></button>
+                    <button onclick="getDecreasedSecond()" id="decrease-hundred" class="btn btn-default"><i
+                            class="fas fa-minus"></i></button>
                 </div>
             </div>
             <div class="calculations">
@@ -99,7 +105,7 @@
                     </div>
                 </div>
             </div>
-            <button class="btn-style">Book Now</button>
+            <button onclick="showDetails()"  id="booking-details" class="btn-style">Book Now</button>
         </div>
 
         <div class="booking-content">
@@ -109,8 +115,13 @@
                 voluptatibus quam</p>
         </div>
         </section>
+    </main>
 
-        <!--Thank You-->
+    <div id="booking-info">
+
+sdfjsfdghfdjgdfg
+    </div>
+    <!--Thank You-->
 </body>
 
 </html>
