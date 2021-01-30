@@ -15,3 +15,8 @@ function getSubtotal(){
     const t = parseInt(document.getElementById('ticket-quantity').value) * 150 + parseInt(document.getElementById('value-hundred').value) * 100;
     return (document.getElementById('sub-total')).innerText = t;
 }
+function calculateVat(){
+    const Cost = document.getElementById('sub-total')
+    const totalCost = parseInt(Cost.innerText);
+    document.getElementById('total-vat').innerText = totalCost * 0.1;
+}
