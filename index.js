@@ -1,3 +1,4 @@
+// first class part handling
 function getIncreased() {
     const ticketInput = document.getElementById('ticket-quantity');
     const ticketCount = parseInt(ticketInput.value);
@@ -16,6 +17,8 @@ function getDecreased() {
     calculateVat();
     calculateTotal();
 }
+
+// Economy part handling
 function getIncreasedSecond() {
     const ticketInputSecond = document.getElementById('value-hundred');
     const ticketCountSecond = parseInt(ticketInputSecond.value);
@@ -34,6 +37,8 @@ function getDecreasedSecond() {
     calculateVat();
     calculateTotal();
 }
+
+//calculations
 function setSubtotal() {
     const t = parseInt(document.getElementById('ticket-quantity').value) * 150 + parseInt(document.getElementById('value-hundred').value) * 100;
     (document.getElementById('sub-total')).innerText = t;
@@ -41,6 +46,9 @@ function setSubtotal() {
 function getSubtotal(){
     const t = parseInt(document.getElementById('ticket-quantity').value) * 150 + parseInt(document.getElementById('value-hundred').value) * 100;
     return (document.getElementById('sub-total')).innerText = t;
+}
+function getTotalTickets(){
+  return  parseInt(document.getElementById('ticket-quantity').value) + parseInt(document.getElementById('value-hundred').value);
 }
 function calculateVat(){
     const Cost = document.getElementById('sub-total')
@@ -55,10 +63,18 @@ function getVat(){
 function calculateTotal(){
     document.getElementById('total').innerText = getSubtotal() + getVat();
 }
+function getTotalAmount(){
+    return  document.getElementById('total').innerText = getSubtotal() + getVat();
+}
 
+//extra part handling
 function showDetails(){
    const bookingDetails = document.getElementById('home-page');
    const bookingInfo = document.getElementById('booking-info');
    bookingDetails.style.display = "none";
    bookingInfo.style.display = "block";
+   const showTicket = document.getElementById('show-ticket');
+   const showAmount = document.getElementById('show-amount');
+   showTicket.innerText = getTotalTickets();
+   showAmount.innerText = getTotalAmount();
 }

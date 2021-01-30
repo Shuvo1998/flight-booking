@@ -133,3 +133,13 @@ nav ul li a:hover, a.active{
 
 
 }
+.ok-btn{
+    display: block;
+    width: 100px;
+    border-radius: 10px;
+    background-color: aqua;
+    color: crimson;
+    font-size: 20px;
+    padding: 9px;
+    margin: 0 auto;
+}
