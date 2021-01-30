@@ -25,3 +25,6 @@ function getVat(){
     const totalCost = parseInt(Cost.innerText);
     return document.getElementById('total-vat').innerText = totalCost * 0.1;
 }
+function calculateTotal(){
+    document.getElementById('total').innerText = getSubtotal() + getVat();
+}
