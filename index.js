@@ -20,6 +20,15 @@ function getDecreased() {
     calculateVat();
     calculateTotal();
 }
+function getIncreasedSecond() {
+    const ticketInputSecond = document.getElementById('value-hundred');
+    const ticketCountSecond = parseInt(ticketInputSecond.value);
+    const newCountSecond = ticketCountSecond + 1;
+    ticketInputSecond.value = newCountSecond;
+    setSubtotal();
+    calculateVat();
+    calculateTotal();
+}
 
 function setSubtotal() {
     const t = parseInt(document.getElementById('ticket-quantity').value) * 150 + parseInt(document.getElementById('value-hundred').value) * 100;
